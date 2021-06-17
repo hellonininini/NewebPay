@@ -4,12 +4,7 @@ const crypto = require("crypto");
 const postData = [];
 const tradeInfo = await encrypt(postData);
 const tradeSha = await encryptSHA256(tradeInfo);
-const formData = {
-  MerchantID: setting.shop_id,
-  TradeInfo: tradeInfo,
-  TradeSha: tradeSha,
-  Version: "1.5"
-};
+console.log(tradeSha)
 
 async function encrypt(postData) {
   // build query
